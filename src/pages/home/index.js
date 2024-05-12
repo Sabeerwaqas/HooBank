@@ -1,6 +1,6 @@
 import * as images from "../../assets/index";
 
-export const data = [
+const data = [
     {
         cardText: "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
         reviewerName: "Herman Janson",
@@ -18,4 +18,4 @@ export const data = [
     },
 ]
 
-// export default data;
+export default data;

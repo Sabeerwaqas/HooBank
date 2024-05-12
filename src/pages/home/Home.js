@@ -4,11 +4,11 @@ import { projectColors } from "../../assets/colors/index";
 import * as images from "../../assets/index";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { data } from "./index"
+import data from "./index"
 
 const Home = () => {
     return (
-        //=====> what people, cards, company logos, and let's try section starts 
+        //=====> what people, cards, company logos
         <Box component={"section"}
             sx={{
                 background: `linear-gradient(90deg, rgba(1,4,16,1) 53%, rgba(18,45,69,1) 100%)`,
@@ -123,8 +123,89 @@ const Home = () => {
                     }
                 </Grid>
 
+                {/* comapany logos */}
+
+                <Grid container
+                    justifyContent={"space-around"}
+                    alignItems={"center"}
+                    textAlign={"-webkit-center"}
+                    spacing={4}
+                    mt={1}
+
+                >
+                    <Grid item xs={12} sm={6} md={3}
+
+                    >
+                        <Box component={"img"}
+                            sx={{
+                                width: "150px",
+
+                            }}
+                            src={images.projectImages.airBnb}
+                            alt="Airbnb logo"
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Box component={"img"}
+                            sx={{
+                                width: "150px",
+                                display: "block"
+
+                            }}
+                            src={images.projectImages.binance}
+                            alt="Binance logo"
+                        /> </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Box component={"img"}
+                            sx={{
+                                width: "150px",
+                                display: "block"
+
+                            }}
+                            src={images.projectImages.coinbase}
+                            alt="Coinbase logo"
+                        /> </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Box component={"img"}
+                            sx={{
+                                width: "150px",
+                                display: "block"
+
+                            }}
+                            src={images.projectImages.dropbox}
+                            alt="Airbnb logo"
+                        /> </Grid>
+                </Grid>
+
             </Container>
-        </Box>
+
+            {/* let's try section starts  */}
+            <Box component={"section"}
+                sx={{
+                    backgroundColor: projectColors.footerBgColor,
+                    width: "100%",
+                    height: "50vh",
+                    mt: 10,
+                    pt: 4,
+                    pb: 4
+                }}
+            >
+                <Container
+                    sx={{
+                        // backgroundColor:"red",
+                        width: '100%',
+                        height: "30vh",
+                        background: `linear-gradient(to right bottom, rgba(63,62,69,1) ,rgba(17,15,29,1))}`,
+                        borderRadius: "10px"
+                    }}
+                >
+                    <Grid container>
+                        <Grid item xs={12}></Grid>
+                    </Grid>
+                </Container>
+
+            </Box>
+        </Box >
     )
 }
 
