@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Container } from '@mui/material';
+import { Box, Grid, Container, Button } from '@mui/material';
 import { projectColors } from "../../assets/colors/index";
 import * as images from "../../assets/index";
 import Avatar from '@mui/material/Avatar';
@@ -184,7 +184,7 @@ const Home = () => {
                 sx={{
                     backgroundColor: projectColors.footerBgColor,
                     width: "100%",
-                    height: "50vh",
+                    height: "auto",
                     mt: 10,
                     pt: 4,
                     pb: 4
@@ -193,14 +193,57 @@ const Home = () => {
                 <Container
                     sx={{
                         // backgroundColor:"red",
-                        width: '100%',
-                        height: "30vh",
-                        background: `linear-gradient(to right bottom, rgba(63,62,69,1) ,rgba(17,15,29,1))}`,
-                        borderRadius: "10px"
+                        width: '80%',
+                        height: { xs: "auto", md: "145px" },
+                        background: `linear-gradient(to bottom left,rgba(63,62,69,1) 53%, rgba(17,15,29,1))`,
+                        borderRadius: "10px",
+                        pb: 4
+
+                        // backgroundColor:"red"
                     }}
                 >
-                    <Grid container>
-                        <Grid item xs={12}></Grid>
+                    <Grid container
+                        justifyContent={"center"}
+                        alignItems={"center"}
+
+                    >
+                        <Grid item xs={12} md={7}
+                            sx={{
+                                color: projectColors.white,
+                                textAlign: { xs: "center", md: "left" }
+                            }}
+                        >
+                            <Box component={"h2"}
+
+                            >
+                                Let's try our service now!
+                            </Box>
+                            <Box component={"p"}
+                                sx={{
+                                    mb: 0,
+                                    textAlign: { xs: "center", md: "inherit" }
+                                }}
+                            >
+                                Everything you need to accept card payments <Box component={"br"} sx={{ xs: "none", md: "block" }} /> and grow your business anywhere on the planet.
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={2}
+                            sx={{
+                                textAlign: { xs: "-webkit-center", md: "inherit" },
+                            }}
+                        >
+                            <Button size={"large"}
+                                sx={{
+                                    mt: { xs: 3 },
+                                    display: "block",
+                                    color: "#000000",
+                                    textTransform: "capitalize",
+                                    background: `linear-gradient(to bottom right, rgba(149,236,239,1) 59%, rgba(51,187,207,1) 100%)`
+                                }}
+                            >
+                                Get Started
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Container>
 
