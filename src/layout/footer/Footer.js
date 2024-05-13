@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Grid } from '@mui/material';
 import { projectColors } from "../../assets/colors/index";
-import * as images from "../../assets/index";
+import { projectImages } from "../../assets/index";
 import ButtonComp from '../../components/button/ButtonComp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
@@ -29,7 +29,7 @@ const Footer = () => {
                     <Grid item xs={12} sm={6} md={3}>
                         {/* logo section */}
                         <Box component={"img"}
-                            src={images.projectImages.logo}
+                            src={projectImages.logo}
                             alt="Logo"
                             sx={{
                                 width: "120px",

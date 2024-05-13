@@ -41,6 +41,9 @@ export const projectImages = {
     visaLogo: require("./images/visa.png"),
     shopifyLogo: require("./images/shopify.png"),
     chartLine: require("./images/chartLine.png"),
+    outerCircle: require("./images/largeCircle.png"),
+    middleCircle: require("./images/mediumCircle.png"),
+    innerCircle: require("./images/smallCircle.png"),
 
     //=====> Images use fourth section end
 
@@ -65,4 +68,4 @@ export const projectImages = {
 
 }
 
-// export default projectImages;
+// export default images;

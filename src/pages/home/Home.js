@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Container, Button } from '@mui/material';
 import { projectColors } from "../../assets/colors/index";
-import * as images from "../../assets/index";
+import { projectImages } from "../../assets/index";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import data from "./index"
@@ -23,6 +23,7 @@ const Home = () => {
                         <Box component={"h2"}
                             sx={{
                                 fontSize: { xs: "32px", sm: "48px" },
+                                mb: "10px"
                             }}
                         >
                             Find a better card deal<Box component={"br"} sx={{ display: { xs: "none", lg: "block" } }} /> in few easy steps.
@@ -40,15 +41,62 @@ const Home = () => {
                                 color: "#000000",
                                 textTransform: "capitalize",
                                 background: `linear-gradient(to bottom right, rgba(149,236,239,1) 59%, rgba(51,187,207,1) 100%)`,
-                                width:{xs:"100%", md:"auto"}
+                                width: { xs: "100%", md: "auto" }
                             }}
                         >
                             Get Started
                         </Button>
                     </Grid>
                     <Grid item md={6}>
+                        {/* Outer circle */}
+                        <Grid container alignItems={"center"}>
+                            <Grid item xs={6}
+                                sx={{
+                                    backgroundImage: `url(${projectImages.outerCircle})`,
+                                    height: "288px",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundPosition: 'center',
+                                    backgroundSize: "cover",
+                                    ml: { md: 25 },
+                                    mt: { md: 6 }
+                                }}
+                            >
+                                {/* middle circle */}
+                                <Grid container alignItems={"center"}>
+                                    <Grid item xs={6}
+                                        sx={{
+                                            backgroundImage: `url(${projectImages.middleCircle})`,
+                                            height: "145px",
+                                            // width: "200px",
+                                            backgroundRepeat: "no-repeat",
+                                            backgroundPosition: 'center',
+                                            backgroundSize: "cover",
+                                            ml: { md: 9 },
+                                            mt: { md: 8.5 },
+                                            
+                                        }}
+                                    >
+                                        {/* inner circle */}
+                                        <Grid container alignItems={"center"}>
+                                            <Grid item xs={6}
+                                                sx={{
+                                                    backgroundImage: `url(${projectImages.innerCircle})`,
+                                                    height: "72px",
+                                                    // width: "200px",
+                                                    backgroundRepeat: "no-repeat",
+                                                    backgroundPosition: 'center',
+                                                    backgroundSize: "cover",
+                                                    ml: { md: 4.5 },
+                                                    mt: { md: 4.5 }
+                                                }}
+                                            >
 
-                        {/* <Box component={"h2"}></Box> */}
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Container>
@@ -67,7 +115,8 @@ const Home = () => {
                     <Grid container
                         sx={{
                             color: projectColors.white,
-                            textAlign: { xs: "center", md: "inherit" }
+                            textAlign: { xs: "center", md: "inherit" },
+                            mt: 4
 
                         }}
                         alignItems={"center"}
@@ -116,7 +165,7 @@ const Home = () => {
 
                                     <Grid item xs={12} md={4}>
                                         <Box component={"img"}
-                                            src={images.projectImages.cardParallelImg}
+                                            src={projectImages.cardParallelImg}
                                             alt="Card image"
                                             sx={{
                                                 width: "30px"
@@ -185,7 +234,7 @@ const Home = () => {
                                     width: "150px",
 
                                 }}
-                                src={images.projectImages.airBnb}
+                                src={projectImages.airBnb}
                                 alt="Airbnb logo"
                             />
                         </Grid>
@@ -196,7 +245,7 @@ const Home = () => {
                                     display: "block"
 
                                 }}
-                                src={images.projectImages.binance}
+                                src={projectImages.binance}
                                 alt="Binance logo"
                             /> </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -206,7 +255,7 @@ const Home = () => {
                                     display: "block"
 
                                 }}
-                                src={images.projectImages.coinbase}
+                                src={projectImages.coinbase}
                                 alt="Coinbase logo"
                             /> </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -216,7 +265,7 @@ const Home = () => {
                                     display: "block"
 
                                 }}
-                                src={images.projectImages.dropbox}
+                                src={projectImages.dropbox}
                                 alt="Airbnb logo"
                             /> </Grid>
                     </Grid>
