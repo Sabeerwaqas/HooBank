@@ -44,6 +44,7 @@ export const projectImages = {
     outerCircle: require("./images/largeCircle.png"),
     middleCircle: require("./images/mediumCircle.png"),
     innerCircle: require("./images/smallCircle.png"),
+    scanCreditCard:require("./images/Scan.png"),
 
     //=====> Images use fourth section end
 
